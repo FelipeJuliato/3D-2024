@@ -1,25 +1,79 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+:root {
+    --cor-de-fundo: #ffffff;
+    --amarelo: #EAA332;
+    --preto: #000000;
+    --botao-ativo: #E7DABF;
+    --botao-inativo: #e7dabf81(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
+    --vermelho
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+body {
+    font-family: "Chakra Petch", sans-serif;
+    background-color: var(--texto-fundo);
+    color: var(--cor-de-fundo);  
+}
 
-<body>
-    <section class="conteudo-principal">
-        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-        <div class="botoes">
-            <button class="botao">Construir uma moto eletrica</button>
-            <button class="botao">Reformar meu peugeot</button>
-            <button class="botao">Entrar na academia</button>
-            <button class="botao">Concluir meus objetivos espirituais</button>
-          
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
 
-            </h2>
-        </div>
-    </section>
-</body>
-</html>
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px; 
+}
+
+.titulo-principal span {
+    color: var(--vermelho);
+}
+
+.botao {
+    font-family: "Crakra Petch", sans-serif;
+    background-color: var(--botao-inativo);
+    color: var(--preto);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    font-size: 18px;
+    align-items: center;
+    width: 100%;}
+
+.botoes {
+        display: block;
+    }
+    
+    @media screen and (min-width: 768px) {
+        .botoes {
+            display: flex;
+        }
+    }
+    .botao:first-child {
+        border-radius: 40px 40px 0 0;
+    }
+    
+    @media screen and (min-width: 768px) {
+        .botoes {
+            display: flex;
+        }
+    
+        .botao:first-child {
+            border-radius: 40px 0 0 0;
+        }
+    
+        .botao:last-child {
+            border-radius: 0 40px 0 0;
+        }
+    }
+    
+    .ativo{
+        background-color: var(--botao-ativo);
+        border-bottom: 4px solid var(--amarelo);
+    }
+    
