@@ -9,9 +9,9 @@
 }
 
 body {
+    font-family: "Chakra Petch", sans-serif;
     background-color: var(--texto-fundo);
-    color: var(--branco);
-    font-family: 'Chakra Petch', sans-serif;
+    color: var(--cor-de-fundo);  
 }
 
 .conteudo-principal {
